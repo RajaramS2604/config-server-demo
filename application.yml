@@ -1,0 +1,66 @@
+spring:
+  datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+   
+      #LOCAL
+      url: jdbc:mysql://entdb-uat.tradebulls.in:3501/EnterpriseDB?useSSL=false&allowPublicKeyRetrieval=true
+      username: rajaram.sawant
+      password: Otp$123456
+      
+      #UAT
+#      url: jdbc:mysql://localhost:7002/EnterpriseDB?useSSL=false&allowPublicKeyRetrieval=true
+#      username: appuser
+#      password: Pwd4usr@tb12
+      
+      
+      #PROD
+#      url: jdbc:mysql://localhost:7002/EnterpriseDB?useSSL=false&allowPublicKeyRetrieval=true
+#      username: appuser
+#      password: Pwd4usr@prd12
+      
+      
+      
+      hikari:
+        connection-timeout: 40000
+        minimum-idle: 6
+        maximum-pool-size: 30
+        max-lifetime: 1800000
+        pool-name: ms-mf-research
+        idle-timeout: 400000
+        leak-detection-threshold: 10000
+  jpa:
+      database-platform: org.hibernate.dialect.MySQL5Dialect
+      generate-ddl: false
+      hibernate:
+        ddl-auto: none
+        naming:
+          physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      show-sql: true
+          
+
+eureka:
+  client:
+    service-url:      
+      #defaultZone: http://localhost:9002/eureka
+       ##FOR DEV
+       #defaultZone: http://10.14.0.34:8081/eureka/
+       ##FOR UAT
+       defaultZone: http://uat-eureka.tradebulls.in:8081/eureka/
+       ##FOR PROD
+       #defaultZone: http://prod-eureka.tradebulls.in:8081/eureka/
+     
+  instance:
+    prefer-ip-address: true
+    
+    
+    
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+          
+       
+zuul:
+  ribbon-isolation-strategy: THREAD
