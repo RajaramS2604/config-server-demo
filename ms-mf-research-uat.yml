@@ -1,6 +1,6 @@
 spring: 
     application: 
-        name: ms-mf-research-test
+        name: ms-mf-research-demo
 
 tbs:
   cache: 
