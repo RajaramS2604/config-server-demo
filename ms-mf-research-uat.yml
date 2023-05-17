@@ -12,8 +12,8 @@ tbs:
 sentinel:
   port: 27379
   master: redis-master
-  password: Tbs@Redis@12
+  password: Tbs@Redis@12345
   nodes:
-    - 10.24.0.12
-    - 10.24.0.24
-    - 10.24.0.38
+    - 10.24.0.
+    - 10.24.0.
+    - 10.24.0.
