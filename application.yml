@@ -5,7 +5,7 @@ spring:
       #LOCAL
       url: jdbc:mysql://entdb-uat.tradebulls.in:3501/EnterpriseDB?useSSL=false&allowPublicKeyRetrieval=true
       username: rajaram.sawant
-      password: Otp$123456
+      password: Raja@123
       
       #UAT
 #      url: jdbc:mysql://localhost:7002/EnterpriseDB?useSSL=false&allowPublicKeyRetrieval=true
